@@ -15,6 +15,17 @@ const Contact = () => {
     <div className={`${styles.container} ${isLoaded ? styles.visible : ''}`}>
       <div className={styles.content}>
         <div className={styles.box}>
+          <h3 className={classes.skillsHeaders}>Tools</h3>
+          <p className={classes.skillsText}>MongoDB</p>
+          <p className={classes.skillsText}>PostgreSQL</p>
+          <p className={classes.skillsText}>GitHub</p>
+          <p className={classes.skillsText}>Replit</p>
+          <p className={classes.skillsText}>VSCode</p>
+          <p className={classes.skillsText}>Node.js</p>
+          <p className={classes.skillsText}>React</p>
+          <p className={classes.skillsText}>Flask</p>
+        </div>
+        <div className={styles.box}>
           <h3 className={classes.skillsHeaders}>Languages</h3>
           <p className={classes.skillsText}>HTML</p>
           <p className={classes.skillsText}>CSS</p>
@@ -22,19 +33,8 @@ const Contact = () => {
           <p className={classes.skillsText}>SQL</p>
           <p className={classes.skillsText}>Python</p>
           <p className={classes.skillsText}>C++</p>
-          <p className={classes.skillsText}>HTML</p>
           <p className={classes.skillsText}>TypeScript</p>
           <p className={classes.skillsText}>Sass</p>
-        </div>
-        <div className={styles.box}>
-          <h3 className={classes.skillsHeaders}>Tools</h3>
-          <p className={classes.skillsText}>MongoDB</p>
-          <p className={classes.skillsText}>PostgreSQL</p>
-          <p className={classes.skillsText}>GitHub</p>
-          <p className={classes.skillsText}>Terminal</p>
-          <p className={classes.skillsText}>VSCode</p>
-          <p className={classes.skillsText}>Replit</p>
-          <p className={classes.skillsText}>React</p>
         </div>
         <div className={styles.box}>
           <h3 className={classes.skillsHeaders}>Expertise</h3>
@@ -43,7 +43,9 @@ const Contact = () => {
           <p className={classes.skillsText}>Business Development</p>
           <p className={classes.skillsText}>Networking</p>
           <p className={classes.skillsText}>Social Media</p>
-          <p className={classes.skillsText}></p>
+          <p className={classes.skillsText}>Product Development</p>
+          <p className={classes.skillsText}>Sales</p>
+          <p className={classes.skillsText}>Community Building</p>
         </div>
       </div>
     </div>

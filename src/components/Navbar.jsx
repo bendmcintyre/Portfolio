@@ -70,19 +70,19 @@ const Navbar = () => {
         <div className={classes.mobileNav}>
           <div className={classes.mobileNavMenu}>
             <Link to="/" className={classes.mobileNavLink}>
-              <p className={`${classes.navName} ${classes.homeNav}`}>Home</p>
+              <p className={`${classes.navNameMobile} ${classes.homeNav} ${classes.navNameMobileHome}`}>Home</p>
             </Link>
             <Link to="/about" className={classes.mobileNavLink}>
-              <p className={classes.navName}>About</p>
+              <p className={classes.navNameMobile}>About</p>
             </Link>
             <Link to="/skills" className={classes.mobileNavLink}>
-              <p className={classes.navName}>Skills</p>
+              <p className={classes.navNameMobile}>Skills</p>
             </Link>
             <Link to="/projects" className={classes.mobileNavLink}>
-              <p className={classes.navName}>Projects</p>
+              <p className={classes.navNameMobile}>Projects</p>
             </Link>
             <Link to="/contact" className={classes.mobileNavLink}>
-              <p className={classes.navName}>Contact</p>
+              <p className={classes.navNameMobile}>Contact</p>
             </Link>
           </div>
         </div>

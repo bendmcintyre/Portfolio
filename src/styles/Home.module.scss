@@ -1,7 +1,155 @@
-// Home.module.scss
-
 @import './_common.scss';
 
-// Add any Home-specific styles below
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: black;
+  text-align: center;
+}
 
+.visible {
+  animation: fadeIn 0.5s ease-in-out;
+}
 
+h1{
+    font-size: 80px;
+    background: linear-gradient(to right, rgb(0, 119, 255), rgb(255, 0, 247));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+  max-width: 1000px; /* Increase the max width */
+  margin: 0 auto; /* Center the boxes */
+  display: flex;
+  justify-content: space-between; /* Add space between boxes */
+}
+
+.homeHeaders {
+  background: linear-gradient(to right, rgb(0, 119, 255), rgb(255, 0, 247));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeAndPrice {
+    padding-bottom: 1rem;
+    color: black;
+}
+
+.timeAndPriceText {
+    color: black;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color:  rgba(97, 218, 251, 1);
+  }
+}
+
+.boxTime {
+  background-color: white;
+  border-radius: 30px;
+  margin: 1rem;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  color: black;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 2rem;
+  }
+  
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin: 1rem 0;
+  }
+  .boxTime {
+    margin: 1rem 0;
+  }
+}
+
+.boxLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 200px;;
+}
+
+.rotating-image {
+  width: 100%; /* scale up image to 200% of its original size */
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.boxBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin: 1rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  background-color:  rgba(97, 218, 251, 1);
+  width: 80%;
+  height: 150px;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    color:   rgba(97, 218, 251, 1);
+  }
+}
+
+.boxBottomText {
+  font-size: 40px;
+}

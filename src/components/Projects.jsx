@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/Projects.module.scss';
 import classes from '../styles/Projects.module.scss';
 import toolImg from '../images/tool-img.png';
-import medicalImg from '../images/medical-img.png';
+import dogImg from '../images/dog.png';
 import ticTacToeImg from '../images/tic-tac-toe.avif';
 
 const Projects = () => {
@@ -46,7 +46,7 @@ const Projects = () => {
       <div className={classes['project-2']}>   
         <div className={classes['projects-container']}>  
           <div className={classes['project-box']}>
-            <a href="https://www.project2.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://forklift-inspection-app.vercel.app/" target="_blank" rel="noopener noreferrer">
               <div className={classes['project-image']}>
                 <img src={toolImg} alt="Tool" className={classes['tool-img']} />
                 <p className={classes['project-box-click-me']}>Click Me</p>
@@ -74,7 +74,7 @@ const Projects = () => {
           <div className={classes['project-box']}>
             <a href="https://www.project3.com" target="_blank" rel="noopener noreferrer">
               <div className={classes['project-image']}>
-                <img src={medicalImg} alt="Medical" className={classes['medical-img']} />
+                <img src={dogImg} alt="Dog" className={classes['dog-img']} />
                 <p className={classes['project-box-click-me']}>Click Me</p>
               </div>
             </a>
@@ -87,8 +87,8 @@ const Projects = () => {
               <p className={classes['projects-p-tag']}>React</p>
               <p className={classes['projects-p-tag']}>Sass</p>
               <p className={classes['projects-p-tag']}>Javascript</p>
-              <p className={classes['projects-p-tag']}>Typescript</p>
-              <p className={classes['projects-p-tag']}>NPM</p>
+              <p className={classes['projects-p-tag']}>Express</p>
+              <p className={classes['projects-p-tag']}>SQL</p>
             </div>
           </div>
         </div>
