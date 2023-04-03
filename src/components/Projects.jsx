@@ -83,7 +83,7 @@ const Projects = () => {
         <div className={classes['projects-container-description']}>
           <div className={`${classes['project-box-description']} ${classes['project-box-white-bg']}`}>
             <div className={classes['project-text-description']}>
-              <h3>Inspection App</h3>
+              <h3>Animal Rescue</h3>
               <p className={classes['projects-p-tag']}>React</p>
               <p className={classes['projects-p-tag']}>Sass</p>
               <p className={classes['projects-p-tag']}>Javascript</p>
