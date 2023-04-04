@@ -13,7 +13,7 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-h1{
+.homeName{
     font-size: 80px;
     background: linear-gradient(to right, rgb(0, 119, 255), rgb(255, 0, 247));
     background-clip: text;
@@ -73,6 +73,7 @@ h1{
   border-radius: 30px;
   margin: 1rem;
   padding: 1.5rem;
+  min-height: 260px;
   width: 200px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
   color: black;
@@ -139,6 +140,7 @@ h1{
   background-color:  rgba(97, 218, 251, 1);
   width: 80%;
   height: 150px;
+  max-width: 1000px;
 
   &:hover {
     transform: scale(1.05);

@@ -69,19 +69,19 @@ const Navbar = () => {
       {showMenu && (
         <div className={classes.mobileNav}>
           <div className={classes.mobileNavMenu}>
-            <Link to="/" className={classes.mobileNavLink}>
+            <Link to="/" className={classes.mobileNavLink} onClick={toggleMenu}>
               <p className={`${classes.navNameMobile} ${classes.homeNav} ${classes.navNameMobileHome}`}>Home</p>
             </Link>
-            <Link to="/about" className={classes.mobileNavLink}>
+            <Link to="/about" className={classes.mobileNavLink} onClick={toggleMenu}>
               <p className={classes.navNameMobile}>About</p>
             </Link>
-            <Link to="/skills" className={classes.mobileNavLink}>
+            <Link to="/skills" className={classes.mobileNavLink} onClick={toggleMenu}>
               <p className={classes.navNameMobile}>Skills</p>
             </Link>
-            <Link to="/projects" className={classes.mobileNavLink}>
+            <Link to="/projects" className={classes.mobileNavLink} onClick={toggleMenu}>
               <p className={classes.navNameMobile}>Projects</p>
             </Link>
-            <Link to="/contact" className={classes.mobileNavLink}>
+            <Link to="/contact" className={classes.mobileNavLink} onClick={toggleMenu}>
               <p className={classes.navNameMobile}>Contact</p>
             </Link>
           </div>

@@ -167,6 +167,17 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .project-image {
+    background-color: #61dafb;;
+  }
+
+  .project-1,
+  .project-2,
+  .project-3 {
+    width: 100%;
+  }
+}
 
 
 

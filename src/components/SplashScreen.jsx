@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import classes from '../styles/SplashScreen.module.scss';
 
-const SplashScreen = ({ onFinish }) => { // <--- change onSplashScreenDone to onFinish
+const SplashScreen = ({ onFinish }) => {
   const introRef = useRef(null);
   const logoRef = useRef(null);
   const logoSpansRef = useRef([]);

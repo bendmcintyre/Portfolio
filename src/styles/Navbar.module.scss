@@ -133,7 +133,6 @@ body {
   text-align: center;
   transition: opacity 0.3s ease;
   z-index: 5;
-  color: blue; // Add this line
 
   &:hover {
     opacity: 0.7;
@@ -159,7 +158,6 @@ body {
   text-align: center;
   transition: opacity 0.3s ease;
   z-index: 5;
-  color: blue;
 }
 
 .mobile-nav .mobile-nav-link:hover,

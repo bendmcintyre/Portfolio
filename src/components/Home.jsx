@@ -41,7 +41,7 @@ const Home = () => {
       <div className={styles.content}>
         <div className={styles['box-container']}>
         <div className={styles.box}>
-          <h1>Hi, I'm Ben</h1>
+          <h1 className={styles.homeName}>Hi, I'm Ben</h1>
         </div>
         </div>
         <div className={styles.boxTime}>
