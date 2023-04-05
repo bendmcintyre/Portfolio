@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:3001/submit-form', data);
+      const response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/submit-form', data);
       console.log(response.data);
       setIsLoaded(false);
       setShowSuccess(true);
