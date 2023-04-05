@@ -1,10 +1,7 @@
 @import './_common.scss';
 
 .projects-p-tag {
-  background: linear-gradient(to right, rgb(0, 119, 255), rgb(217, 0, 255));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #551a8b;
   display: flex;
   justify-content: center;
   text-align: center;

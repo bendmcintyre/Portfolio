@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Contact.module.scss';
 import classes from '../styles/Contact.module.scss';
 import { FaEnvelope, FaLinkedin, FaGithub, FaPhoneSquareAlt } from 'react-icons/fa';
+import axios from 'axios';
 
 const Contact = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [resetForm, setResetForm] = useState(false);
+  const formRef = useRef();
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,9 +17,53 @@ const Contact = () => {
     }, 500);
   }, []);
 
+  useEffect(() => {
+    if (isSubmitted) {
+      setTimeout(() => {
+        setIsLoaded(false);
+        setShowSuccess(true);
+      }, 1000);
+      setTimeout(() => {
+        setIsLoaded(true);
+        setShowSuccess(false);
+        setIsSubmitted(false);
+        setResetForm(true);
+      }, 1000);
+    }
+  }, [isSubmitted]);
+
+  useEffect(() => {
+    if (resetForm) {
+      formRef.current.reset();
+      setResetForm(false);
+    }
+  }, [resetForm]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3001/submit-form', data);
+      console.log(response.data);
+      setIsLoaded(false);
+      setShowSuccess(true);
+      setIsSubmitted(true);
+      setResetForm(true);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
-    <div className={`${styles['container']} ${isLoaded ? styles.visible : ''}`}>
-      <form>
+    <div className={`${styles['container']} ${isLoaded && !isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.hidden : ''}`}>
+      <form ref={formRef} onSubmit={handleSubmit} className={`${!isSubmitted ? styles.fadeInOut : ''}`}>
         <div className={styles['form-item']}>
           <label htmlFor="name" className={styles['form-label']}>Name:</label>
           <br />
@@ -37,6 +86,12 @@ const Contact = () => {
         </div>
         <button type="submit" className={styles['submit-button']}>Submit</button>
       </form>
+      {showSuccess && (
+        <p
+          className={`${styles['success-message']} ${!isLoaded && isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.fadeInOut : ''}`}
+        >
+        </p>
+      )}
       <div className={styles['contact-info']}>
         <a href="tel:+13306065612" className={styles['contact-link']}>
           <FaPhoneSquareAlt className={styles['contact-icon']} />
@@ -55,8 +110,10 @@ const Contact = () => {
           GitHub
         </a>
       </div>
+      {resetForm && setTimeout(() => { setResetForm(false); }, 50)}
     </div>
   );
 };
 
 export default Contact;
+

@@ -24,14 +24,11 @@
 .aboutMeText {
   font-family: 'Montserrat', sans-serif;
   line-height: 2.5;
-  color: white;
+  color: black;
 }
 
 .aboutHeaders {
-  background: linear-gradient(to right, rgb(0, 119, 255), rgb(255, 0, 247));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #551a8b;
   padding-bottom: 1rem;
 }
 
@@ -50,13 +47,12 @@
 }
 
 .box {
-  background-color: black;
+  background-color: white;
   border-radius: 30px;
   margin: 1rem;
   padding: 1.5rem;
   flex: 1;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-  background-color: black;
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -64,6 +60,7 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background-color: rgb(97, 218, 251);
   }
 }
 

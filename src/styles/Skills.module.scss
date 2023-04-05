@@ -27,10 +27,7 @@
 }
 
 .skillsHeaders {
-  background: linear-gradient(to right, rgb(0, 119, 255), rgb(255, 0, 247));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #551a8b;
   padding-bottom: 1rem;
 }
 
@@ -49,7 +46,7 @@
 }
 
 .box {
-  background-color: rgba(97, 218, 251, 1);
+  background-color: white;
   border-radius: 30px;
   margin: 1rem;
   padding: 1.5rem;
@@ -63,7 +60,7 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    background-color: white;
+    background-color: rgb(97, 218, 251);
   }
 }
 

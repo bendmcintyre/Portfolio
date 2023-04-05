@@ -72,7 +72,7 @@ const Projects = () => {
       <div className={classes['project-3']}>
         <div className={classes['projects-container']}>  
           <div className={classes['project-box']}>
-            <a href="https://www.project3.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/bendmcintyre/Milestone-Project-3" target="_blank" rel="noopener noreferrer">
               <div className={classes['project-image']}>
                 <img src={dogImg} alt="Dog" className={classes['dog-img']} />
                 <p className={classes['project-box-click-me']}>Click Me</p>

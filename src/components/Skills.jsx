@@ -43,7 +43,7 @@ const Contact = () => {
           <p className={classes.skillsText}>Business Development</p>
           <p className={classes.skillsText}>Networking</p>
           <p className={classes.skillsText}>Social Media</p>
-          <p className={classes.skillsText}>Product Development</p>
+          <p className={classes.skillsText}>Product Inovation</p>
           <p className={classes.skillsText}>Sales</p>
           <p className={classes.skillsText}>Community Building</p>
         </div>

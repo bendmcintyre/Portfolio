@@ -142,12 +142,9 @@ body {
 }
 
 .mobileNavMenu {
-  background-color: black;
+  background-color: #61dafb; // Change the background color to white
   padding-bottom: 5rem;
-}
-
-.mobileNavLink:active {
-  color: #61dafb;;
+  font-size: 25px;
 }
 
 .mobile-nav .mobile-nav-link,
@@ -165,4 +162,8 @@ body {
   opacity: 0.7;
   text-decoration: none;
 }
+
+
+
+
 
