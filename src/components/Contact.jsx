@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   try {
-    const response = await axios.post('https://git.heroku.com/damp-oasis-63336.git', data);
+    const response = await axios.post('https://damp-oasis-63336.herokuapp.com/', data);
     console.log(response.data);
     setIsSubmitted(true);
   } catch (err) {
