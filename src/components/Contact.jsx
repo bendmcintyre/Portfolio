@@ -39,23 +39,24 @@ const Contact = () => {
   }, [resetForm]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const data = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-
-    try {
-      const response = await axios.post('https://damp-oasis-63336.herokuapp.com/submit-form', data);
-      console.log(response.data);
-      setIsSubmitted(true);
-    } catch (err) {
-      console.error(err);
-    }
+  const data = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    subject: e.target.subject.value,
+    message: e.target.message.value,
   };
+
+  try {
+    const response = await axios.post('https://damp-oasis-63336.herokuapp.com/', data);
+    console.log(response.data);
+    setIsSubmitted(true);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 
   return (
     <div className={`${styles.container} ${isLoaded && !isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.hidden : ''}`}>
