@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Contact.module.scss';
-import classes from '../styles/Contact.module.scss';
 import { FaEnvelope, FaLinkedin, FaGithub, FaPhoneSquareAlt } from 'react-icons/fa';
 import axios from 'axios';
 
@@ -8,8 +7,8 @@ const Contact = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [resetForm, setResetForm] = useState(false);
   const formRef = useRef();
+  const [resetForm, setResetForm] = useState(false); // Add this line
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,7 +27,7 @@ const Contact = () => {
         setShowSuccess(false);
         setIsSubmitted(false);
         setResetForm(true);
-      }, 1000);
+      }, 2000);
     }
   }, [isSubmitted]);
 
@@ -50,20 +49,17 @@ const Contact = () => {
     };
 
     try {
-      const response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/submit-form', data);
+      const response = await axios.post('/submit-form', data);
       console.log(response.data);
-      setIsLoaded(false);
-      setShowSuccess(true);
       setIsSubmitted(true);
-      setResetForm(true);
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <div className={`${styles['container']} ${isLoaded && !isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.hidden : ''}`}>
-      <form ref={formRef} onSubmit={handleSubmit} className={`${!isSubmitted ? styles.fadeInOut : ''}`}>
+    <div className={`${styles.container} ${isLoaded && !isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.hidden : ''}`}>
+      <form ref={formRef} onSubmit={handleSubmit} className={!isSubmitted ? styles.fadeInOut : ''}>
         <div className={styles['form-item']}>
           <label htmlFor="name" className={styles['form-label']}>Name:</label>
           <br />
@@ -82,7 +78,7 @@ const Contact = () => {
         <div className={styles['form-item']}>
           <label htmlFor="message" className={styles['form-label']}>Message:</label>
           <br />
-          <textarea className={`${styles['form-text']}, ${classes['message-input-box']}`} id="message" name="message" required maxLength="500"></textarea>
+          <textarea className={`${styles['form-text']} ${styles['message-input-box']}`} id="message" name="message" required maxLength="500"></textarea>
         </div>
         <button type="submit" className={styles['submit-button']}>Submit</button>
       </form>
@@ -90,12 +86,13 @@ const Contact = () => {
         <p
           className={`${styles['success-message']} ${!isLoaded && isSubmitted ? styles.visible : ''} ${isSubmitted ? styles.fadeInOut : ''}`}
         >
+          Form submission successful!
         </p>
       )}
       <div className={styles['contact-info']}>
         <a href="tel:+13306065612" className={styles['contact-link']}>
           <FaPhoneSquareAlt className={styles['contact-icon']} />
-          (330) 606-5612
+                  (330) 606-5612
         </a>
         <a href="mailto:bendmcintyre@gmail.com" className={styles['contact-link']}>
           <FaEnvelope className={styles['contact-icon']} />
@@ -116,4 +113,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
 
