@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/Skills.module.scss';
 import classes from '../styles/Skills.module.scss';
 
-const Contact = () => {
+const Skills = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Skills;

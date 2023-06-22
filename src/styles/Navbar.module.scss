@@ -164,6 +164,31 @@ body {
 }
 
 
+.dropdown-link {
+  color: black; // replace with the color you want
+  text-decoration: none; // remove underline
 
+  &:visited {
+    color: black; // replace with the color you want
+  }
 
+  &:hover, &:active {
+    color: black; // replace with the color you want
+    text-decoration: none; // remove underline
+  }
+}
+
+.navLink, .mobileNavLink {
+  color: black; // replace with the color you want
+  text-decoration: none; // remove underline
+
+  &:visited {
+    color: black; // replace with the color you want
+  }
+
+  &:hover, &:active {
+    color: black; // replace with the color you want
+    text-decoration: none; // remove underline
+  }
+}
 

@@ -6,10 +6,12 @@
   align-items: center;
   padding: 1rem;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .visible {
-  animation: fadeIn 0.5s ease-in-out;
+  opacity: 1;
 }
 
 @keyframes fadeIn {

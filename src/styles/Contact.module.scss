@@ -13,6 +13,8 @@
   text-align: center;
   height: 100%;
   padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 
   .form-item {
     display: flex;
@@ -154,3 +156,4 @@
 .fadeInOut {
   animation: fadeInOut 1s ease-in-out forwards;
 }
+

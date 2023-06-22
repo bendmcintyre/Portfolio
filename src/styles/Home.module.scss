@@ -7,10 +7,12 @@
   padding: 1rem;
   color: black;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .visible {
-  animation: fadeIn 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .homeName{
@@ -152,3 +154,4 @@
 .boxBottomText {
   font-size: 40px;
 }
+
