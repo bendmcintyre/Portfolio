@@ -60,7 +60,9 @@ const Projects = () => {
             <div className={classes['project-text-description']}>
               <h3>Tic-Tac-Toe</h3>
               <p className={classes['projects-p-tag']}>HTML</p>
+              <p className={classes['projects-p-tag-blank']}>.</p>
               <p className={classes['projects-p-tag']}>CSS</p>
+              <p className={classes['projects-p-tag-blank']}>.</p>
               <p className={classes['projects-p-tag']}>Javascript</p>
             </div>
           </div>
