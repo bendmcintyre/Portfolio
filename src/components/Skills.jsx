@@ -23,6 +23,7 @@ const Skills = () => {
           <p className={classes.skillsText}>VSCode</p>
           <p className={classes.skillsText}>Node.js</p>
           <p className={classes.skillsText}>React</p>
+          <p className={classes.skillsText}>Terminal</p>
           <p className={classes.skillsText}>Flask</p>
         </div>
         <div className={styles.box}>
@@ -35,6 +36,7 @@ const Skills = () => {
           <p className={classes.skillsText}>C++</p>
           <p className={classes.skillsText}>TypeScript</p>
           <p className={classes.skillsText}>Sass</p>
+          <p className={classes.skillsText}>Tailwind</p>
         </div>
         <div className={styles.box}>
           <h3 className={classes.skillsHeaders}>Expertise</h3>
@@ -43,6 +45,7 @@ const Skills = () => {
           <p className={classes.skillsText}>Business Development</p>
           <p className={classes.skillsText}>Networking</p>
           <p className={classes.skillsText}>Social Media</p>
+          <p className={classes.skillsText}>Marketing</p>
           <p className={classes.skillsText}>Product Inovation</p>
           <p className={classes.skillsText}>Sales</p>
           <p className={classes.skillsText}>Community Building</p>
